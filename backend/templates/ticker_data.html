@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticker Data</title>
+    <link rel="stylesheet" href="ticker_styles.css">
+</head>
+<body>
+    <div class="card">
+        <h1 class="card-title">Select Company</h1>
+        <form id="tickerForm" class="tickerForm">
+            <div class="select-wrapper">
+                <select id="ticker" class="tickerSelect" onchange="displayData()">
+                    <option value="" selected disabled>Select Company</option>
+                    <option value="Pepsi">Pepsi</option>
+                    <option value="Coca-Cola">Coca-Cola</option>
+                    <option value="Nike">Nike</option>
+                </select>
+                <div class="select-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </form>
+        <div id="tickerData" class="tickerDataContainer">
+            <!-- Data will be displayed here -->
+        </div>
+        <label for="textDataTextarea">Financial Insight:</label>
+        <textarea id="textDataTextarea" rows="15" cols="80" class="hidden-textarea" title="Text Data"></textarea>
+    </div>
+    
+    <!-- jQuery library script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="ticker_script.js"></script>
+
+</body>
+</html>
